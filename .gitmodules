@@ -1,0 +1,6 @@
+[submodule "Modules/DependencyInjection"]
+	path = Modules/DependencyInjection
+	url = https://github.com/aspnet/DependencyInjection.git
+[submodule "Modules/Hosting"]
+	path = Modules/Hosting
+	url = https://github.com/aspnet/Hosting.git
