@@ -6,6 +6,7 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Tests.Fakes;
 
 namespace ASPNETSampleWithDI
 {
@@ -15,6 +16,15 @@ namespace ASPNETSampleWithDI
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IFakeScopedService, FakeService>();
+            services.AddScoped(provider =>
+            {
+                var fakeService = provider.GetService<IFakeService>();
+                return new ScopedFactoryService
+                {
+                    FakeService = fakeService,
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,11 +34,16 @@ namespace ASPNETSampleWithDI
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                string result = "0";
+                result = context.RequestServices.GetRequiredService<IFakeScopedService>().SimpleMethod();
+                await context.Response.WriteAsync($"Hello World! ({ result })");
             });
         }
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+        public static void Main(string[] args)
+        {
+            WebApplication.Run<Startup>(args);
+        }
     }
 }

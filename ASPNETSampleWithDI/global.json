@@ -1,9 +1,10 @@
-﻿{
+{
   "projects": [
     "src",
     "test",
     "Modules\\DependencyInjection\\src",
-    "Modules\\Hosting\\src"
+    "Modules\\Hosting\\src\\",
+    "../../../../../../data/SCC/GIT/ASP.NET/DependencyInjection/src"
   ],
   "sdk": {
     "version": "1.0.0-rc1-update1"
