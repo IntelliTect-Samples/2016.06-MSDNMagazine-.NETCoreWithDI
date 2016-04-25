@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace SampleLibrary
 {
     internal static class Library
     {
-        static public IServiceCollection ServiceCollection { get; set; }
+        static public IServiceProvider ServiceProvider { get; set; }
+
     }
 }
