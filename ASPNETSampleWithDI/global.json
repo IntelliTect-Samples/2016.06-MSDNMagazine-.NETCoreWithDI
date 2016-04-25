@@ -2,9 +2,8 @@
   "projects": [
     "src",
     "test",
-    "Modules\\DependencyInjection\\src",
-    "Modules\\Hosting\\src\\",
-    "../../../../../../data/SCC/GIT/ASP.NET/DependencyInjection/src"
+    "submodules\\DependencyInjection\\src",
+    "submodules\\Hosting\\src\\"
   ],
   "sdk": {
     "version": "1.0.0-rc1-update1"

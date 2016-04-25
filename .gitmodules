@@ -1,0 +1,8 @@
+[submodule "ASPNETSampleWithDI/submodules/DependencyInjection"]
+	path = ASPNETSampleWithDI/submodules/DependencyInjection
+	url = https://github.com/aspnet/DependencyInjection.git
+	branch = (1.0.0-rc1)
+[submodule "ASPNETSampleWithDI/submodules/Hosting"]
+	path = ASPNETSampleWithDI/submodules/Hosting
+	url = https://github.com/aspnet/Hosting.git
+	branch = (1.0.0-rc1)

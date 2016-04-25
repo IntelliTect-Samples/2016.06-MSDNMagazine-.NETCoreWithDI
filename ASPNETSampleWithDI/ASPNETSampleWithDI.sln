@@ -12,7 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASPNETSampleWithDI", "src\ASPNETSampleWithDI\ASPNETSampleWithDI.xproj", "{80A2D076-8F64-486A-833C-5BF6E0D69E32}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{C3CC63B4-D1B3-434B-8F7B-D2251EAB8CF9}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SamplePaymentService", "src\SamplePaymentService\SamplePaymentService.xproj", "{BE1B70E4-077C-4159-873C-87BA68CF0373}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9EB52B50-C429-4D1D-A8AC-A53502665134}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{526DBA91-34CD-44E2-B226-4D0F4C6DE30F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Extensions.DependencyInjection.Abstractions", "submodules\DependencyInjection\src\Microsoft.Extensions.DependencyInjection.Abstractions\Microsoft.Extensions.DependencyInjection.Abstractions.xproj", "{4E959D3B-2E0D-4296-B22C-D428DED294F0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Extensions.DependencyInjection.Tests", "test\Microsoft.Extensions.DependencyInjection.Tests\Microsoft.Extensions.DependencyInjection.Tests.xproj", "{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,11 +32,25 @@ Global
 		{80A2D076-8F64-486A-833C-5BF6E0D69E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80A2D076-8F64-486A-833C-5BF6E0D69E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80A2D076-8F64-486A-833C-5BF6E0D69E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1B70E4-077C-4159-873C-87BA68CF0373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1B70E4-077C-4159-873C-87BA68CF0373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1B70E4-077C-4159-873C-87BA68CF0373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1B70E4-077C-4159-873C-87BA68CF0373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E959D3B-2E0D-4296-B22C-D428DED294F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E959D3B-2E0D-4296-B22C-D428DED294F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E959D3B-2E0D-4296-B22C-D428DED294F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E959D3B-2E0D-4296-B22C-D428DED294F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{80A2D076-8F64-486A-833C-5BF6E0D69E32} = {9817B094-E60A-4C28-9A73-E5E5F9A53E38}
+		{BE1B70E4-077C-4159-873C-87BA68CF0373} = {9817B094-E60A-4C28-9A73-E5E5F9A53E38}
+		{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1} = {9EB52B50-C429-4D1D-A8AC-A53502665134}
 	EndGlobalSection
 EndGlobal
