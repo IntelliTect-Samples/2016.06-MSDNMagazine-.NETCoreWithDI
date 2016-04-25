@@ -6,9 +6,9 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Tests.Fakes;
+using AspNetSampleWithDI;
 
-namespace ASPNETSampleWithDI
+namespace AspNeSampleWithDI
 {
     public class Startup
     {
@@ -16,13 +16,13 @@ namespace ASPNETSampleWithDI
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IFakeScopedService, FakeService>();
+            services.AddScoped<ISampleScopedService, SampleService>();
             services.AddScoped(provider =>
             {
-                var fakeService = provider.GetService<IFakeService>();
+                var SampleService = provider.GetService<ISampleService>();
                 return new ScopedFactoryService
                 {
-                    FakeService = fakeService,
+                    SampleService = SampleService,
                 };
             });
         }
@@ -35,7 +35,7 @@ namespace ASPNETSampleWithDI
             app.Run(async (context) =>
             {
                 string result = "0";
-                result = context.RequestServices.GetRequiredService<IFakeScopedService>().SimpleMethod();
+                result = context.RequestServices.GetRequiredService<ISampleScopedService>().SimpleMethod();
                 await context.Response.WriteAsync($"Hello World! ({ result })");
             });
         }
