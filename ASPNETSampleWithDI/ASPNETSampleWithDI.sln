@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9817B094-E60A-4C28-9A73-E5E5F9A53E38}"
 EndProject
@@ -23,6 +23,12 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Extensions.DependencyInjection.Tests", "test\Microsoft.Extensions.DependencyInjection.Tests\Microsoft.Extensions.DependencyInjection.Tests.xproj", "{48ADDEE9-A7F3-46C7-BD0C-19891535C3A1}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Extensions.DependencyInjection", "submodules\DependencyInjection\src\Microsoft.Extensions.DependencyInjection\Microsoft.Extensions.DependencyInjection.xproj", "{07ABDD98-9974-48CB-8265-53D1A8EC9E34}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Hosting", "submodules\Hosting\src\Microsoft.AspNet.Hosting\Microsoft.AspNet.Hosting.xproj", "{3944F036-7E75-47E8-AA52-C4B89A64EC3A}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Hosting.Abstractions", "submodules\Hosting\src\Microsoft.AspNet.Hosting.Abstractions\Microsoft.AspNet.Hosting.Abstractions.xproj", "{BB780FBB-7842-4759-8DE7-96FA2E5571C1}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Hosting.Server.Abstractions", "submodules\Hosting\src\Microsoft.AspNet.Hosting.Server.Abstractions\Microsoft.AspNet.Hosting.Server.Abstractions.xproj", "{FDBBA081-5248-4FC0-9E08-B46BEF3FA438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +56,18 @@ Global
 		{07ABDD98-9974-48CB-8265-53D1A8EC9E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07ABDD98-9974-48CB-8265-53D1A8EC9E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07ABDD98-9974-48CB-8265-53D1A8EC9E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3944F036-7E75-47E8-AA52-C4B89A64EC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3944F036-7E75-47E8-AA52-C4B89A64EC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3944F036-7E75-47E8-AA52-C4B89A64EC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3944F036-7E75-47E8-AA52-C4B89A64EC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB780FBB-7842-4759-8DE7-96FA2E5571C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB780FBB-7842-4759-8DE7-96FA2E5571C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB780FBB-7842-4759-8DE7-96FA2E5571C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB780FBB-7842-4759-8DE7-96FA2E5571C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDBBA081-5248-4FC0-9E08-B46BEF3FA438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBBA081-5248-4FC0-9E08-B46BEF3FA438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBBA081-5248-4FC0-9E08-B46BEF3FA438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBBA081-5248-4FC0-9E08-B46BEF3FA438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
