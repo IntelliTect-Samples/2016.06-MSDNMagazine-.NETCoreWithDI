@@ -15,9 +15,12 @@
   "frameworks": {
     "dnx451": {
       "dependencies": {
-        "SamplePaymentService": "1.0.0-*"
+        "SamplePaymentService": "",
+        "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final",
+        "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Localization.Abstractions": "1.0.0-rc1-final"
       }
-    },
-    "dnxcore50": { }
+    }
   }
 }
