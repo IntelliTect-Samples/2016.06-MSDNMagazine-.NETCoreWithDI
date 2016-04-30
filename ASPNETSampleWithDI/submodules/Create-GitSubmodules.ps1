@@ -6,7 +6,7 @@ Function Add-Submodule {
     )
     $currentLocation = Get-Location
     try {
-        git submodule --quiet add -b "(1.0.0-rc1)" https://github.com/aspnet/DependencyInjection.git
+        git submodule --quiet add -b "$branch" $uri
         $submoduleName = [IO.Path]::GetFileNameWithoutExtension( (([Uri]"$uri").AbsolutePath))
         Set-Location $submoduleName
         if($branch) {
