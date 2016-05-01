@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1e94bec0-dcca-4b1c-90b8-3dedb63f5680}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>DependencyInjection</Name>
+    <Name>DependencyInjection.Architecture</Name>
     <RootNamespace>DependencyInjection</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
