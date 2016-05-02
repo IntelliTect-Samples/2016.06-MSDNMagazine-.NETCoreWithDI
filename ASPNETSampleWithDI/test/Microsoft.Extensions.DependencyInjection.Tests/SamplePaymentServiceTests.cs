@@ -28,7 +28,7 @@ namespace Microsoft.Extensions.DependencyInjection.Tests
             IServiceProvider serviceProvider =
                 serviceCollection.BuildServiceProvider();
             PaymentService paymentService =
-                new PaymentService(serviceProvider);
+                new PaymentService(loggerFactory);
 
             Assert.StrictEqual<string>(
                 "PaymentService created",
