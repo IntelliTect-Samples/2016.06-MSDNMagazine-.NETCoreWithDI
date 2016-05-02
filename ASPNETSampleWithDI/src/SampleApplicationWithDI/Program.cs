@@ -1,7 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Threading;
 using Microsoft.Framework.DependencyInjection;
+using Microsoft.Framework.Logging;
+using Microsoft.Framework.Logging.Debug;
 
 namespace SampleApplicationWithDI
 {
@@ -11,30 +12,31 @@ namespace SampleApplicationWithDI
 
         static void Main( string[] args )
         {
-            Bootstrap();
+            RegisterServices();
 
             var logger = ActivatorUtilities.GetServiceOrCreateInstance<ILogger>( Provider );
 
-            logger.LogMessage( $"Starting up at: {DateTime.Now}" );
+            logger.LogInformation( $"Starting up at: {DateTime.Now}" );
 
             var time = ActivatorUtilities.GetServiceOrCreateInstance<TimeProvider>( Provider );
 
-            logger.LogMessage( $"Time provider reports Now as: {time.Now()}" );
+            logger.LogInformation( $"TimeProvider reports Now as: {time.Now()}" );
 
-            Thread.Sleep(TimeSpan.FromSeconds( 2 ));
+            Thread.Sleep( TimeSpan.FromSeconds( 2 ) );
 
-            var time2 = ActivatorUtilities.GetServiceOrCreateInstance<TimeProvider>(Provider);
+            logger.LogInformation( "Two seconds have now elapsed." );
 
-            logger.LogMessage($"2nd Time provider still reports Now as: {time2.Now()}");
+            var time2 = ActivatorUtilities.GetServiceOrCreateInstance<TimeProvider>( Provider );
 
-            logger.LogMessage($"Actual time is: {DateTime.Now}");
+            logger.LogInformation( $"2nd TimeProvider still reports Now as: {time2.Now()}" );
 
+            logger.LogInformation( $"Actual time is: {DateTime.Now}" );
         }
 
-        private static void Bootstrap()
+        private static void RegisterServices()
         {
             IServiceCollection services = new ServiceCollection();
-            services.AddTransient<ILogger, ConsoleLogger>();
+            services.AddTransient<ILogger, DebugLogger>( provider => new DebugLogger( typeof(Program).FullName ) );
             services.AddSingleton<TimeProvider>();
             Provider = services.BuildServiceProvider();
         }

@@ -1,21 +1,23 @@
-﻿
-using System;
+﻿using System;
+using Microsoft.Framework.Logging;
 
 namespace SampleApplicationWithDI
 {
     public class TimeProvider
     {
-        public TimeProvider(ILogger logger)
+        public TimeProvider( ILogger logger )
         {
             RightNow = DateTime.Now;
-            logger.LogMessage($"TimeProvider created at: {RightNow}");
+            logger.LogInformation( $"TimeProvider created at: {RightNow}" );
         }
 
-        private DateTime RightNow { get; set; }
+        public string[] SomeStrings { get; set; }
+
+        private DateTime RightNow { get; }
 
         public DateTime Now()
         {
             return RightNow;
-        } 
+        }
     }
 }
