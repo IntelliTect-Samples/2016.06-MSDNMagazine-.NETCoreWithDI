@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using Microsoft.Extensions.Logging;
 
 namespace Microsoft.Extensions.DependencyInjection.Tests

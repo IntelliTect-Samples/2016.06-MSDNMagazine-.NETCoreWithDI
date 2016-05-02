@@ -1,3 +1,4 @@
+
 namespace SampleApplicationWithDI
 {
     public interface ILogger

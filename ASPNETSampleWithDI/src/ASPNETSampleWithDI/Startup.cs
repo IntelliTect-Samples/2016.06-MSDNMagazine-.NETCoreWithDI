@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
-using AspNetSampleWithDI;
 
-namespace AspNeSampleWithDI
+namespace AspNetSampleWithDI
 {
     public class Startup
     {
@@ -19,10 +15,10 @@ namespace AspNeSampleWithDI
             services.AddScoped<ISampleScopedService, SampleService>();
             services.AddScoped(provider =>
             {
-                var SampleService = provider.GetService<ISampleService>();
+                var sampleService = provider.GetService<ISampleService>();
                 return new ScopedFactoryService
                 {
-                    SampleService = SampleService,
+                    SampleService = sampleService,
                 };
             });
         }
