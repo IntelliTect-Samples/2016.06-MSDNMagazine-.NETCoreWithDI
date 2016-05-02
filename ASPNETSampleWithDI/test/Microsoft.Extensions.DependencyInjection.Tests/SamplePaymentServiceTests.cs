@@ -1,10 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection.Tests.Mocks.CustomLogger;
+﻿using Microsoft.Extensions.DependencyInjection.Tests.Mocks;
 using Microsoft.Extensions.Logging;
-using SamplePaymentService;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.Extensions.DependencyInjection.Tests
@@ -18,11 +14,13 @@ namespace Microsoft.Extensions.DependencyInjection.Tests
             IServiceCollection serviceCollection = new ServiceCollection();
 
             ILoggerFactory loggerFactory =
-                new Logging.LoggerFactory();
+                new LoggerFactory();
+
             #region Initialize Custom Logging
             CustomLoggerProvider customLoggerProvider;
             loggerFactory.AddCustomLogger(out customLoggerProvider);
             #endregion // Initialize Logging
+
             serviceCollection.AddInstance<ILoggerFactory>(loggerFactory);
 
             IServiceProvider serviceProvider =
@@ -32,7 +30,7 @@ namespace Microsoft.Extensions.DependencyInjection.Tests
 
             Assert.StrictEqual<string>(
                 "PaymentService created",
-                customLoggerProvider.Loggers[nameof(PaymentService)].LogDataQueue.Dequeue());
+                customLoggerProvider.Loggers[typeof(PaymentService).FullName].LogDataQueue.Dequeue());
 
             serviceCollection.AddSingleton<ILoggerFactory>();
         }

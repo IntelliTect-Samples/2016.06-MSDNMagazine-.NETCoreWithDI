@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Extensions.DependencyInjection.Tests.Mocks.CustomLogger
+﻿namespace Microsoft.Extensions.DependencyInjection.Tests.Mocks
 {
     public class CustomLoggerProviderEventArgs
     {
