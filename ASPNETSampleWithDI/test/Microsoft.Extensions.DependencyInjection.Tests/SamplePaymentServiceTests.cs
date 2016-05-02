@@ -25,12 +25,12 @@ namespace Microsoft.Extensions.DependencyInjection.Tests
 
             IServiceProvider serviceProvider =
                 serviceCollection.BuildServiceProvider();
-            PaymentService paymentService =
-                new PaymentService(loggerFactory);
+            MockPaymentService paymentService =
+                new MockPaymentService(loggerFactory);
 
             Assert.StrictEqual<string>(
-                "PaymentService created",
-                customLoggerProvider.Loggers[typeof(PaymentService).FullName].LogDataQueue.Dequeue());
+                "MockPaymentService created",
+                customLoggerProvider.Loggers[typeof(MockPaymentService).FullName].LogDataQueue.Dequeue());
 
             serviceCollection.AddSingleton<ILoggerFactory>();
         }

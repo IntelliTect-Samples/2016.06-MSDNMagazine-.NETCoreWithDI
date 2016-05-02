@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Extensions.DependencyInjection.Tests.Mocks;
 using Microsoft.Extensions.Logging;
 
 namespace Microsoft.Extensions.DependencyInjection.Tests
@@ -12,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection.Tests
             #region Register test mocks in IoC container.
 
             serviceCollection.AddInstance<ILoggerFactory>( new LoggerFactory() );
-            serviceCollection.AddTransient<IPaymentService, PaymentService>();
+            serviceCollection.AddTransient<IPaymentService, MockPaymentService>();
 
             #endregion
 
